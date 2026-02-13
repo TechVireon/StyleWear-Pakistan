@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleWear Pakistan - About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #2c3e50;
+            background-color: #faf9f7;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3d2f;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #b68b5c;
+            font-size: 1rem;
+            display: block;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            color: #b68b5c;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+        }
+
+        #cart-count {
+            background: #b68b5c;
+            color: white;
+            border-radius: 50%;
+            padding: 0.2rem 0.6rem;
+            font-size: 0.8rem;
+            position: absolute;
+            top: -12px;
+            right: -12px;
+        }
+
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #1e3d2f;
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* About Content */
+        .about-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: #1e3d2f;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: #b68b5c;
+            margin-bottom: 1rem;
+        }
+
+        .values-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .values-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .values-list i {
+            color: #b68b5c;
+            font-size: 1.2rem;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 5px solid #b68b5c;
+        }
+
+        .team-member h3 {
+            color: #1e3d2f;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #777;
+        }
+
+        /* Footer */
+        footer {
+            background: #1e3d2f;
+            color: white;
+            padding: 3rem 5% 1rem;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #b68b5c;
+        }
+
+        .footer-section p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #b68b5c;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            z-index: 999;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 80px;
+                flex-direction: column;
+                background: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+                padding: 2rem 0;
+                gap: 1.5rem;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .page-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+    <!-- Cart Modal HTML -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Your Shopping Cart</h2>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-modal-body" id="cart-items">
+                <!-- Cart items will appear here -->
+                <p class="empty-cart">Your cart is empty</p>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">Rs. 0</span>
+                </div>
+                <button class="checkout-btn" onclick="openCheckout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal HTML -->
+    <div id="checkout-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Checkout</h2>
+                <span class="close-checkout">&times;</span>
+            </div>
+            <div class="cart-modal-body">
+                <form id="checkout-form" onsubmit="placeOrder(event)">
+                    <div class="form-group">
+                        <label for="full-name">Full Name *</label>
+                        <input type="text" id="full-name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone-number">Phone Number *</label>
+                        <input type="tel" id="phone-number" required placeholder="03XX XXXXXXX">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email (Optional)</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Delivery Address *</label>
+                        <textarea id="address" required placeholder="Enter your complete address"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="city">City *</label>
+                        <select id="city" required>
+                            <option value="">Select City</option>
+                            <option value="Karachi">Karachi</option>
+                            <option value="Lahore">Lahore</option>
+                            <option value="Islamabad">Islamabad</option>
+                            <option value="Rawalpindi">Rawalpindi</option>
+                            <option value="Faisalabad">Faisalabad</option>
+                            <option value="Multan">Multan</option>
+                            <option value="Gujranwala">Gujranwala</option>
+                            <option value="Peshawar">Peshawar</option>
+                            <option value="Quetta">Quetta</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Payment Method *</label>
+                        <div class="payment-options">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="jazzcash" required> 
+                                <i class="fas fa-mobile-alt"></i> JazzCash
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="easypaisa" required> 
+                                <i class="fas fa-wallet"></i> EasyPaisa
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="bank" required> 
+                                <i class="fas fa-university"></i> Bank Transfer
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="cod" required> 
+                                <i class="fas fa-truck"></i> Cash on Delivery
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="order-summary" id="checkout-summary">
+                        <h3>Order Summary</h3>
+                        <div id="checkout-items"></div>
+                        <div class="checkout-total">
+                            <span>Total Amount:</span>
+                            <span id="checkout-total">Rs. 0</span>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="place-order-btn">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="success-modal" class="cart-modal">
+        <div class="cart-modal-content success-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p>Thank you for shopping with StyleWear Pakistan</p>
+            <div class="order-details">
+                <p>Your order has been confirmed.</p>
+                <p>You will receive a confirmation call shortly.</p>
+                <p>Order #: <span id="order-number">SW2024</span></p>
+            </div>
+            <div class="whatsapp-order">
+                <a href="https://wa.me/923000000000?text=I%20want%20to%20track%20my%20order" target="_blank" class="whatsapp-order-btn">
+                    <i class="fab fa-whatsapp"></i> Track on WhatsApp
+                </a>
+            </div>
+            <button class="continue-shopping" onclick="closeSuccessModal()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <style>
+        /* Cart Modal Styles */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .cart-modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+            animation: slideIn 0.3s;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .success-content {
+            text-align: center;
+            max-width: 450px;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .cart-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-modal-header h2 {
+            color: #1e3d2f;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .close-cart, .close-checkout {
+            font-size: 2rem;
+            cursor: pointer;
+            color: #999;
+            transition: color 0.3s;
+        }
+
+        .close-cart:hover, .close-checkout:hover {
+            color: #b68b5c;
+        }
+
+        .cart-modal-body {
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .cart-item-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-details h4 {
+            color: #1e3d2f;
+            margin-bottom: 0.3rem;
+        }
+
+        .cart-item-price {
+            color: #b68b5c;
+            font-weight: 600;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .quantity-btn {
+            background: #f0f0f0;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .quantity-btn:hover {
+            background: #b68b5c;
+            color: white;
+        }
+
+        .item-quantity {
+            font-weight: 600;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .remove-item {
+            color: #ff4444;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .remove-item:hover {
+            color: #cc0000;
+        }
+
+        .empty-cart {
+            text-align: center;
+            color: #999;
+            padding: 2rem;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3d2f;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .checkout-btn, .place-order-btn, .continue-shopping {
+            width: 100%;
+            padding: 1rem;
+            background: #1e3d2f;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1rem;
+        }
+
+        .checkout-btn:hover, .place-order-btn:hover, .continue-shopping:hover {
+            background: #b68b5c;
+        }
+
+        /* Checkout Form Styles */
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #1e3d2f;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #b68b5c;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .payment-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-option:hover {
+            border-color: #b68b5c;
+            background: #f9f9f9;
+        }
+
+        .payment-option input[type="radio"] {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+
+        .payment-option i {
+            color: #b68b5c;
+        }
+
+        .order-summary {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+
+        .order-summary h3 {
+            color: #1e3d2f;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .checkout-total {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #1e3d2f;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ddd;
+        }
+
+        /* Success Modal */
+        .success-icon {
+            font-size: 5rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+        .order-details {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+
+        .order-details p {
+            margin-bottom: 0.5rem;
+        }
+
+        #order-number {
+            color: #b68b5c;
+            font-weight: 600;
+        }
+
+        .whatsapp-order {
+            margin: 1.5rem 0;
+        }
+
+        .whatsapp-order-btn {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-order-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .whatsapp-order-btn i {
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .cart-modal-content {
+                margin: 2% auto;
+                width: 95%;
+                padding: 1rem;
+            }
+
+            .payment-options {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // Cart array to store items
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        
+        // Update cart count on page load
+        function updateCartCount() {
+            const cartCountElement = document.getElementById('cart-count');
+            if (cartCountElement) {
+                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCountElement.textContent = totalItems;
+            }
+        }
+
+        // Add to cart function
+        function addToCart(name, price, image) {
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: parseInt(price.replace(/,/g, '')),
+                    image: image,
+                    quantity: 1
+                });
+            }
+            
+            // Save to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Show animation
+            alert('Item added to cart!');
+        }
+
+        // Open cart modal
+        function openCart() {
+            const modal = document.getElementById('cart-modal');
+            displayCartItems();
+            modal.style.display = 'block';
+        }
+
+        // Display cart items
+        function displayCartItems() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartTotalElement = document.getElementById('cart-total');
+            
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = '<p class="empty-cart">Your cart is empty</p>';
+                cartTotalElement.textContent = 'Rs. 0';
+                return;
+            }
+            
+            let html = '';
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <img src="${item.image}" alt="${item.name}">
+                        </div>
+                        <div class="cart-item-details">
+                            <h4>${item.name}</h4>
+                            <div class="cart-item-price">Rs. ${item.price.toLocaleString()}</div>
+                        </div>
+                        <div class="cart-item-actions">
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, -1)">-</button>
+                            <span class="item-quantity">${item.quantity}</span>
+                            <button class="quantity-btn" onclick="updateQuantity(${index}, 1)">+</button>
+                            <i class="fas fa-trash remove-item" onclick="removeFromCart(${index})"></i>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartItemsContainer.innerHTML = html;
+            cartTotalElement.textContent = `Rs. ${total.toLocaleString()}`;
+        }
+
+        // Update quantity
+        function updateQuantity(index, change) {
+            if (cart[index].quantity + change > 0) {
+                cart[index].quantity += change;
+            } else {
+                cart.splice(index, 1);
+            }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCartItems();
+            updateCartCount();
+        }
+
+        // Remove from cart
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCartItems();
+            updateCartCount();
+        }
+
+        // Open checkout modal
+        function openCheckout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty!');
+                return;
+            }
+            
+            document.getElementById('cart-modal').style.display = 'none';
+            const checkoutModal = document.getElementById('checkout-modal');
+            
+            // Display order summary
+            const checkoutItems = document.getElementById('checkout-items');
+            const checkoutTotal = document.getElementById('checkout-total');
+            
+            let itemsHtml = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                itemsHtml += `
+                    <div class="checkout-item">
+                        <span>${item.name} x ${item.quantity}</span>
+                        <span>Rs. ${itemTotal.toLocaleString()}</span>
+                    </div>
+                `;
+            });
+            
+            checkoutItems.innerHTML = itemsHtml;
+            checkoutTotal.textContent = `Rs. ${total.toLocaleString()}`;
+            
+            checkoutModal.style.display = 'block';
+        }
+
+        // Place order
+        function placeOrder(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('full-name').value;
+            const phone = document.getElementById('phone-number').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const payment = document.querySelector('input[name="payment"]:checked').value;
+            
+            // Validate phone number (Pakistan format)
+            const phoneRegex = /^03[0-9]{9}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid Pakistani phone number (e.g., 03XXXXXXXXX)');
+                return;
+            }
+            
+            // Generate order number
+            const orderNumber = 'SW' + Date.now().toString().slice(-8);
+            document.getElementById('order-number').textContent = orderNumber;
+            
+            // Prepare order details for WhatsApp
+            let orderDetails = `*New Order from StyleWear Pakistan*%0A`;
+            orderDetails += `Order #: ${orderNumber}%0A`;
+            orderDetails += `Name: ${name}%0A`;
+            orderDetails += `Phone: ${phone}%0A`;
+            orderDetails += `Address: ${address}, ${city}%0A`;
+            orderDetails += `Payment: ${payment}%0A%0A`;
+            orderDetails += `*Order Items:*%0A`;
+            
+            let total = 0;
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                orderDetails += `${item.name} - ${item.quantity} x Rs. ${item.price.toLocaleString()} = Rs. ${itemTotal.toLocaleString()}%0A`;
+            });
+            
+            orderDetails += `%0A*Total Amount: Rs. ${total.toLocaleString()}*`;
+            
+            // Update WhatsApp link with order details
+            const whatsappLink = `https://wa.me/923000000000?text=${orderDetails}`;
+            
+            // Close checkout modal
+            document.getElementById('checkout-modal').style.display = 'none';
+            
+            // Show success modal
+            document.getElementById('success-modal').style.display = 'block';
+            
+            // Update WhatsApp button link in success modal
+            document.querySelector('.whatsapp-order-btn').href = whatsappLink;
+            
+            // Clear cart
+            cart = [];
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+        }
+
+        // Close success modal
+        function closeSuccessModal() {
+            document.getElementById('success-modal').style.display = 'none';
+        }
+
+        // Initialize cart on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCartCount();
+            
+            // Add click event to cart icon
+            const cartIcon = document.querySelector('.cart-icon');
+            if (cartIcon) {
+                cartIcon.addEventListener('click', openCart);
+            }
+            
+            // Close modal when clicking on X
+            document.querySelector('.close-cart').addEventListener('click', function() {
+                document.getElementById('cart-modal').style.display = 'none';
+            });
+            
+            document.querySelector('.close-checkout').addEventListener('click', function() {
+                document.getElementById('checkout-modal').style.display = 'none';
+            });
+            
+            // Close modal when clicking outside
+            window.addEventListener('click', function(event) {
+                const cartModal = document.getElementById('cart-modal');
+                const checkoutModal = document.getElementById('checkout-modal');
+                const successModal = document.getElementById('success-modal');
+                
+                if (event.target === cartModal) {
+                    cartModal.style.display = 'none';
+                }
+                if (event.target === checkoutModal) {
+                    checkoutModal.style.display = 'none';
+                }
+                if (event.target === successModal) {
+                    successModal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+<body>
+    <a href="https://wa.me/923000000000?text=I%20want%20to%20order%20from%20StyleWear" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h2>StyleWear</h2>
+                <span>PAKISTAN</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div>
+            <h1>About Us</h1>
+            <p>Discover the story behind StyleWear Pakistan</p>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Our Store">
+            </div>
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>Founded in 2020, StyleWear Pakistan has grown from a small boutique to one of Lahore's most beloved garment shops. We specialize in bringing you the finest quality Pakistani fashion, blending traditional craftsmanship with modern design sensibilities.</p>
+                <p>Our mission is to make every woman, man, and child feel confident and beautiful in our clothing. We work directly with local artisans and craftsmen to ensure authentic, high-quality products that celebrate our rich cultural heritage.</p>
+                <h3>Our Values</h3>
+                <ul class="values-list">
+                    <li><i class="fas fa-check-circle"></i> Quality craftsmanship in every stitch</li>
+                    <li><i class="fas fa-check-circle"></i> Ethical sourcing and fair wages</li>
+                    <li><i class="fas fa-check-circle"></i> Customer satisfaction guaranteed</li>
+                    <li><i class="fas fa-check-circle"></i> Sustainable fashion practices</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="team-container">
+            <h2 class="section-title" style="text-align: center; font-size: 2.5rem; color: #1e3d2f;">Meet Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Founder">
+                    <h3>Ahmed Raza</h3>
+                    <p>Founder & Creative Director</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1976&q=80" alt="Designer">
+                    <h3>Fatima Khan</h3>
+                    <p>Head Designer</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1974&q=80" alt="Manager">
+                    <h3>Usman Ali</h3>
+                    <p>Store Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>StyleWear Pakistan</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 24 Main Boulevard, Liberty Market, Lahore, Pakistan</p>
+                <p><i class="fas fa-phone"></i> +92 300 0000000</p>
+                <p><i class="fas fa-envelope"></i> info@stylewear.pk</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <p><a href="index.html" style="color: white; text-decoration: none;">Home</a></p>
+                <p><a href="shop.html" style="color: white; text-decoration: none;">Shop</a></p>
+                <p><a href="contact.html" style="color: white; text-decoration: none;">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 StyleWear Pakistan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let cartCount = 0;
+        const cartCountElement = document.getElementById('cart-count');
+
+        function updateCart() {
+            cartCount++;
+            cartCountElement.textContent = cartCount;
+        }
+
+        function toggleMenu() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('active');
+        }
+
+        document.addEventListener('click', function(event) {
+            const navMenu = document.getElementById('navMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (!navMenu.contains(event.target) && !hamburger.contains(event.target) && navMenu.classList.contains('active')) {
+                navMenu.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
